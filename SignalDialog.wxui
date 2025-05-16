@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<creator>
+  <node class="Design" fit="1" classname="SignalDialog" parent-type="wxDialog" name="design" parent-id="0" generate="0" minsize="900,800">
+    <node class="BoxSizer" name="boxsizer_0" layout="1" orientation="8">
+      <node class="GridBagSizer" name="gridbagsizer_0" sizer-flags="wxEXPAND" flex-rows="7" flex-cols="1;3;4" sizer-proportion="0">
+        <node class="StaticText" name="statictext_0" sizer-pos="0,0" label="Name"/>
+        <node class="TextCtrl" name="name" sizer-flags="wxALL|wxEXPAND" sizer-pos="0,1" member="1" sizer-proportion="0"/>
+        <node class="StaticText" name="statictext_1" sizer-pos="0,2" label="BitMap"/>
+        <node class="TextCtrl" name="start_bit" hint="Start Bit" sizer-flags="wxALL|wxEXPAND" sizer-pos="0,3" member="1" sizer-proportion="0"/>
+        <node class="TextCtrl" name="bit_len" hint="Bit Len" sizer-flags="wxALL|wxEXPAND" sizer-pos="0,4" member="1" sizer-proportion="1"/>
+        <node class="Custom" classname="BitMapCtrl" name="map" sizer-span="7,2" include="DBCBitMap.h" sizer-flags="wxALL|wxEXPAND" sizer-pos="1,0" member="1" sizer-proportion="0"/>
+        <node class="StaticText" name="statictext_2" sizer-pos="1,2" label="Byte Order"/>
+        <node class="CheckBox" name="endial" sizer-span="1,2" sizer-flags="wxALL|wxEXPAND" sizer-pos="1,3" label="Big Endial" member="1" sizer-proportion="0"/>
+        <node class="StaticText" name="statictext_3" sizer-pos="2,2" label="Value Type"/>
+        <node class="Choice" name="type" sizer-span="1,2" sizer-flags="wxALL|wxEXPAND" sizer-pos="2,3" member="1" sizer-proportion="0"/>
+        <node class="StaticText" name="statictext_4" sizer-pos="3,2" label="Linear"/>
+        <node class="TextCtrl" name="scale" hint="Scale" sizer-flags="wxALL|wxEXPAND" sizer-pos="3,3" member="1" sizer-proportion="0"/>
+        <node class="TextCtrl" name="offset" hint="Offset" sizer-flags="wxALL|wxEXPAND" sizer-pos="3,4" member="1" sizer-proportion="0"/>
+        <node class="StaticText" name="statictext_5" sizer-pos="4,2" label="Clamp"/>
+        <node class="TextCtrl" name="min" hint="Min" sizer-flags="wxALL|wxEXPAND" sizer-pos="4,3" label="" member="1" sizer-proportion="0"/>
+        <node class="TextCtrl" name="max" hint="Max" sizer-flags="wxALL|wxEXPAND" sizer-pos="4,4" member="1" sizer-proportion="0"/>
+        <node class="StaticText" name="statictext_6" sizer-pos="5,2" label="Unit"/>
+        <node class="TextCtrl" name="unit" sizer-span="1,2" sizer-flags="wxALL|wxEXPAND" sizer-pos="5,3" member="1" sizer-proportion="0"/>
+        <node class="StaticText" name="statictext_7" sizer-pos="6,2" label="Multiplexer"/>
+        <node class="TextCtrl" name="multiplexer" sizer-span="1,2" sizer-flags="wxALL|wxEXPAND" sizer-pos="6,3" member="1" sizer-proportion="1"/>
+        <node class="Spacer" name="spacer_0" sizer-flags="wxALL|wxEXPAND" sizer-pos="7,2" sizer-proportion="0"/>
+      </node>
+      <node class="Notebook" name="notebook_0" sizer-flags="wxALL|wxEXPAND" sizer-proportion="1">
+        <node class="TextCtrl" name="comment" page-label="Comment" window-flags="wxTE_MULTILINE|wxBORDER_NONE" member="1"/>
+        <node class="Custom" classname="AttributePanel" name="attrs" include="AttributePanel.h" page-label="Attributes" member="1"/>
+        <node class="Custom" classname="ValueListPanel" name="values" include="ValTablePanel.h" page-label="Values" member="1"/>
+      </node>
+      <node class="DialogButtonSizer" name="dialogbuttonsizer_0" sizer-flags="wxALL|wxEXPAND" buttons="wxID_OK;wxID_CANCEL" sizer-proportion="0"/>
+    </node>
+  </node>
+</creator>

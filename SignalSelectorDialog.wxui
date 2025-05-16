@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<creator>
+  <node class="Design" fit="1" classname="SignalSelectorDialog" parent-type="wxDialog" name="design" parent-id="0" generate="0" minsize="700,400">
+    <node class="BoxSizer" name="boxsizer_0" layout="1" orientation="8">
+      <node class="ListCtrl" columns="Channel;File;Message;Signal;sigpath" name="active" sizer-flags="wxALL|wxEXPAND" window-flags="wxVSCROLL|wxLC_REPORT|wxBORDER_NONE|wxTAB_TRAVERSAL|wxHSCROLL" member="1" sizer-proportion="0"/>
+      <node class="Toolbar" name="toolbar_0" sizer-flags="wxALL|wxEXPAND" sizer-proportion="0">
+        <node class="ToolbarItem" name="toolbaritem_0" tool-id="wxID_MOVE_UP" bitmap="move_up_icon"/>
+        <node class="ToolbarItem" name="toolbaritem_1" kind="-1"/>
+        <node class="ToolbarItem" name="toolbaritem_2" tool-id="wxID_REMOVE" bitmap="trash_icon"/>
+      </node>
+      <node class="TextCtrl" desc="Filter" name="search" hint="Search" sizer-flags="wxALL|wxEXPAND" window-flags="wxTE_PROCESS_ENTER|wxBORDER_NONE" minsize="-1,-1" member="1" size="300,22" sizer-proportion="0"/>
+      <node class="ListCtrl" columns="Channel;File;Message;Signal;sigpath" name="passive" sizer-flags="wxALL|wxEXPAND" window-flags="wxVSCROLL|wxLC_REPORT|wxBORDER_NONE|wxTAB_TRAVERSAL|wxHSCROLL" member="1" sizer-proportion="1"/>
+      <node class="DialogButtonSizer" name="dialogbuttonsizer_0" sizer-flags="wxALL|wxEXPAND" buttons="wxID_OK;wxID_CANCEL" sizer-proportion="0"/>
+    </node>
+  </node>
+</creator>

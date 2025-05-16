@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<creator>
+  <node class="Design" fit="1" classname="DefineDialog" parent-type="wxDialog" name="design" parent-id="0" generate="0" minsize="500,300">
+    <node class="BoxSizer" name="layout" layout="1" orientation="8" member="1">
+      <node class="FlexGridSizer" name="form" sizer-flags="wxEXPAND" flex-rows="3" flex-cols="1" member="1" sizer-proportion="1">
+        <node class="StaticText" name="statictext_0" label="Name"/>
+        <node class="TextCtrl" name="name" sizer-flags="wxALL|wxEXPAND" member="1" sizer-proportion="0"/>
+        <node class="StaticText" name="statictext_1" label="Object Type"/>
+        <node class="Choice" name="object" sizer-flags="wxALL|wxEXPAND" member="1" sizer-proportion="0"/>
+        <node class="StaticText" name="statictext_2" label="Value Type"/>
+        <node class="Choice" name="type" sizer-flags="wxALL|wxEXPAND" member="1" sizer-proportion="1"/>
+        <node class="Spacer" name="spacer_1"/>
+        <node class="TextCtrl" name="enums" hint="Enums" sizer-flags="wxALL|wxEXPAND" member="1" sizer-proportion="1"/>
+        <node class="Spacer" name="spacer_2"/>
+        <node class="TextCtrl" name="min" hint="Min" sizer-flags="wxALL|wxEXPAND" member="1" sizer-proportion="0"/>
+        <node class="Spacer" name="spacer_3"/>
+        <node class="TextCtrl" name="max" hint="Max" sizer-flags="wxALL|wxEXPAND" member="1" sizer-proportion="0"/>
+        <node class="Spacer" name="spacer_0"/>
+        <node class="CheckBox" name="has_defs" label="HasDefault" member="1"/>
+        <node class="StaticText" name="statictext_4" label="Value"/>
+        <node class="TextCtrl" name="value" hint="" sizer-flags="wxALL|wxEXPAND" member="1" sizer-proportion="0"/>
+      </node>
+      <node class="DialogButtonSizer" name="dialogbuttonsizer_0" sizer-flags="wxALL|wxEXPAND" buttons="wxID_OK;wxID_CANCEL" sizer-proportion="0"/>
+    </node>
+  </node>
+</creator>

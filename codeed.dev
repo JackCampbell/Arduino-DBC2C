@@ -1,0 +1,35 @@
+[Clang-Args]
+-g
+-Wall
+[lldb-Commands]
+type summary add wxString --summary-string "${var.m_impl}"
+[Clang-Format]
+Language: Cpp
+BasedOnStyle: LLVM
+ColumnLimit: '8192'
+AccessModifierOffset: '-4'
+PointerAlignment: Right
+Standard: Auto
+TabWidth: '4'
+IndentWidth: '4'
+UseTab: ForIndentation
+InsertBraces: 'true'
+EmptyLineBeforeAccessModifier: Never
+IndentCaseLabels: false
+IndentGotoLabels: false
+SpaceAfterTemplateKeyword: false
+SpacesInParentheses: true
+SpaceBeforeParens: Never
+AlignConsecutiveMacros:
+  Enabled: false
+  AcrossEmptyLines: false
+  AcrossComments: false
+AlignConsecutiveDeclarations:
+  Enabled: false
+  AcrossEmptyLines: false
+  AcrossComments: false
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: InlineOnly
+FixNamespaceComments: false
+NamespaceIndentation: All
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<appconfig version="18" hostname="Jack-MacBook-Pro">
+  <run name="MarineApp" execute="{{PROJECT_PATH}}build/MarineFeather" work_dir="{{PROJECT_PATH}}" arguments="" mode="0" flags="47" build_args="" cache_args="" remote_hostname="raspberry.local:1881" remote_platform="remote-linux"/>
+</appconfig>

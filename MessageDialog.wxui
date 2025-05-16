@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<creator>
+  <node class="Design" fit="1" classname="MessageDialog" parent-type="wxDialog" name="design" parent-id="0" generate="0" minsize="500,300">
+    <node class="BoxSizer" name="boxsizer_0" layout="1" orientation="8">
+      <node class="BoxSizer" name="boxsizer_1" sizer-flags="wxALL|wxEXPAND" sizer-proportion="0">
+        <node class="FlexGridSizer" name="flexgridsizer_0" sizer-flags="wxEXPAND" flex-cols="1" sizer-proportion="1">
+          <node class="StaticText" name="statictext_0" label="Can ID"/>
+          <node class="TextCtrl" name="id" sizer-flags="wxALL|wxEXPAND" member="1" sizer-proportion="0"/>
+          <node class="StaticText" name="statictext_1" label="Name"/>
+          <node class="TextCtrl" name="name" sizer-flags="wxALL|wxEXPAND" member="1" sizer-proportion="0"/>
+          <node class="StaticText" name="statictext_2" label="Size"/>
+          <node class="TextCtrl" name="size" sizer-flags="wxALL|wxEXPAND" member="1" sizer-proportion="0"/>
+          <node class="StaticText" name="statictext_3" label="Sender"/>
+          <node class="Choice" name="sender" sizer-flags="wxALL|wxEXPAND" member="1" sizer-proportion="0"/>
+        </node>
+        <node class="Custom" classname="BitMapCtrl" name="maps" include="DBCBitMap.h" sizer-flags="wxEXPAND" member="1" sizer-proportion="1"/>
+      </node>
+      <node class="Notebook" name="notebook_0" sizer-flags="wxALL|wxEXPAND" sizer-proportion="1">
+        <node class="TextCtrl" name="comment" page-label="Comment" window-flags="wxTE_MULTILINE|wxBORDER_NONE" member="1"/>
+        <node class="Custom" classname="AttributePanel" name="attrs" include="AttributePanel.h" page-label="Attributes" member="1"/>
+        <node class="Custom" classname="NodeListPanel" name="transmitters" include="NodePanel.h" page-label="Transmitters" member="1"/>
+        <node class="Custom" classname="SignalPanel" name="signals" include="MessagePanel.h" page-label="Signals" member="1"/>
+      </node>
+      <node class="DialogButtonSizer" name="dialogbuttonsizer_0" sizer-flags="wxALL|wxEXPAND" buttons="wxID_OK;wxID_CANCEL" sizer-proportion="0"/>
+    </node>
+  </node>
+</creator>

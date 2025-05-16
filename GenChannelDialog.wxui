@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<creator>
+  <node class="Design" fit="1" classname="GenChannelDialog" parent-type="wxDialog" name="design" parent-id="0" generate="0" minsize="400,200" size="-1,-1">
+    <node class="BoxSizer" name="boxsizer_0" layout="1" orientation="8">
+      <node class="FlexGridSizer" name="flexgridsizer_0" sizer-flags="wxALL|wxEXPAND" flex-rows="" flex-cols="1" sizer-proportion="1">
+        <node class="StaticText" name="statictext_1" label="File"/>
+        <node class="Choice" name="name" sizer-flags="wxALL|wxEXPAND" member="1" sizer-proportion="0"/>
+        <node class="StaticText" name="statictext_5" label="Protocol"/>
+        <node class="Choice" name="protocol" sizer-flags="wxALL|wxEXPAND" member="1" sizer-proportion="0"/>
+        <node class="StaticText" name="statictext_2" label="Baudrate"/>
+        <node class="TextCtrl" name="baudrate" sizer-flags="wxALL|wxEXPAND" member="1" sizer-proportion="0"/>
+        <node class="StaticText" name="statictext_0" label="Target"/>
+        <node class="TextCtrl" name="target" sizer-flags="wxALL|wxEXPAND" member="1" sizer-proportion="0"/>
+        <node class="StaticText" name="statictext_4" label="SPT"/>
+        <node class="TextCtrl" name="spt" hint="0 - 100" sizer-flags="wxALL|wxEXPAND" member="1" sizer-proportion="0"/>
+      </node>
+      <node class="DialogButtonSizer" name="dialogbuttonsizer_0" sizer-flags="wxALL|wxEXPAND" buttons="wxID_OK;wxID_CANCEL" sizer-proportion="0"/>
+    </node>
+  </node>
+</creator>

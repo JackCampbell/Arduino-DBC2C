@@ -1,0 +1,156 @@
+VERSION ""
+
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_: 
+BU_: Eng4 Eng3 Eng2 Eng1 
+BO_ 1073741824 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+   SG_ EngId5U : 0|2@0+ (1,0) [0|0] "" Vector__XXX
+   SG_ EngId4U : 0|2@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 32546868 AEMNetNEMA05: 8 Vector__XXX
+
+BO_ 32546867 AEMNetNEMA04: 8 Vector__XXX
+
+BO_ 32546866 AEMNetNEMA03: 1 Vector__XXX
+   SG_ Eng4EngineSpeedLimitState : 4|1@0+ (1,0) [0|0] "unitless:" Vector__XXX
+   SG_ Eng1EngineSpeedLimitState : 5|1@0+ (1,0) [0|0] "unitless:" Vector__XXX
+   SG_ Eng2EngineSpeedLimitState : 6|1@0+ (1,0) [0|0] "unitless:" Vector__XXX
+   SG_ Eng3EngineSpeedLimitState : 7|1@0+ (1,0) [0|0] "unitless:" Vector__XXX
+   SG_ EngId3U M : 1|2@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 32546865 AEMNetNEMA02: 8 Vector__XXX
+   SG_ Eng4CoolantinFuelErrorState m3 : 4|1@0+ (1,0) [0|0] "unitless:" Eng4
+   SG_ Eng3CoolantinFuelErrorState m2 : 4|1@0+ (1,0) [0|0] "unitless:" Eng3
+   SG_ Eng1ECUBatteryVoltage m0 : 31|8@0+ (0.1,0) [0|25.5] "voltage:V" Eng1
+   SG_ Eng4CoolantLevelErrorState m3 : 2|1@0+ (1,0) [0|0] "unitless:" Eng4
+   SG_ Eng4CoolantFlowError m3 : 3|1@0+ (1,0) [0|0] "unitless:" Eng4
+   SG_ Eng4TorquePercent m3 : 23|8@0+ (0.5,0) [0|127.5] "fraction:%" Eng4
+   SG_ Eng4PresheatStatus m3 : 6|1@0+ (1,0) [0|0] "unitless:" Eng4
+   SG_ Eng4LoadPercent m3 : 15|8@0+ (0.5,0) [0|127.5] "fraction:%" Eng4
+   SG_ Eng4IntakeManifoldPresLimitState m3 : 7|1@0+ (1,0) [0|0] "unitless:" Eng4
+   SG_ Eng4AlternatorErrorState m3 : 5|1@0+ (1,0) [0|0] "unitless:" Eng4
+   SG_ Eng4RunTime m3 : 39|32@0+ (1,0) [0|0] "time:s" Eng4
+   SG_ Eng3CoolantLevelErrorState m2 : 2|1@0+ (1,0) [0|0] "unitless:" Eng3
+   SG_ Eng3CoolantFlowError m2 : 3|1@0+ (1,0) [0|0] "unitless:" Eng3
+   SG_ Eng3PresheatStatus m2 : 6|1@0+ (1,0) [0|0] "unitless:" Eng3
+   SG_ Eng3IntakeManifoldPresLimitState m2 : 7|1@0+ (1,0) [0|0] "unitless:" Eng3
+   SG_ Eng3ECUBatteryVolts m2 : 31|8@0+ (0.1,0) [0|25.5] "voltage:V" Eng3
+   SG_ Eng3AlternatorErrorState m2 : 5|1@0+ (1,0) [0|0] "unitless:" Eng3
+   SG_ Eng3RunTime m2 : 39|32@0+ (1,0) [0|0] "time:s" Eng3
+   SG_ Eng3TorquePercent m2 : 23|8@0+ (0.5,0) [0|127.5] "fraction:%" Eng3
+   SG_ Eng3LoadPercent m2 : 15|8@0+ (0.5,0) [0|127.5] "fraction:%" Eng3
+   SG_ Eng2RunTime m1 : 39|32@0+ (1,0) [0|0] "time:s" Eng2
+   SG_ Eng2ECUBatteryVolts m1 : 31|8@0+ (0.1,0) [0|25.5] "voltage:V" Eng2
+   SG_ Eng2CoolantLevelErrorState m1 : 2|1@0+ (1,0) [0|0] "unitless:" Eng2
+   SG_ Eng2CoolantinFuelErrorState m1 : 4|1@0+ (1,0) [0|0] "unitless:" Eng2
+   SG_ Eng2CoolantFlowErrorState m1 : 3|1@0+ (1,0) [0|0] "unitless:" Eng2
+   SG_ Eng2TorquePercent m1 : 23|8@0+ (0.5,0) [0|127.5] "fraction:%" Eng2
+   SG_ Eng2PresheatStatus m1 : 6|1@0+ (1,0) [0|0] "unitless:" Eng2
+   SG_ Eng2LoadPercent m1 : 15|8@0+ (0.5,0) [0|127.5] "fraction:%" Eng2
+   SG_ Eng2IntakeManifoldPresLimitState m1 : 7|1@0+ (1,0) [0|0] "unitless:" Eng2
+   SG_ Eng2AlternatorErrorState m1 : 5|1@0+ (1,0) [0|0] "unitless:" Eng2
+   SG_ Eng1AlternatorErrorState m0 : 5|1@0+ (1,0) [0|0] "unitless:" Eng1
+   SG_ Eng1RunTime m0 : 39|32@0+ (1,0) [0|0] "time:s" Eng1
+   SG_ Eng1CoolantFlowErrorState m0 : 3|1@0+ (1,0) [0|0] "unitless:" Eng1
+   SG_ Eng4ECUBatteryVolts m3 : 31|8@0+ (0.1,0) [0|25.5] "voltage:V" Eng4
+   SG_ Eng1TorquePercent m0 : 23|8@0+ (0.5,0) [0|127.5] "fraction:%" Eng1
+   SG_ Eng1LoadPercent m0 : 15|8@0+ (0.5,0) [0|127.5] "fraction:%" Eng1
+   SG_ Eng1IntakeManifoldPresLimitState m0 : 7|1@0+ (1,0) [0|0] "unitless:" Eng1
+   SG_ Eng1PresheatStatus m0 : 6|1@0+ (1,0) [0|0] "unitless:" Eng1
+   SG_ Eng1CoolantinFuelErrorState m0 : 4|1@0+ (1,0) [0|0] "unitless:" Eng1
+   SG_ EngId2U M : 1|2@0+ (1,0) [0|0] "" Vector__XXX
+   SG_ Eng1CoolantLevelErrorState m0 : 2|1@0+ (1,0) [0|0] "unitless:" Eng1
+
+BO_ 32546864 AEMNetNEMA01: 8 Eng1
+   SG_ Eng4CoolantTempHighState m3 : 3|1@0+ (1,0) [0|0] "unitless:" Eng4
+   SG_ Eng4TiltTrimPercent m3 : 47|8@0+ (0.5,0) [0|127.5] "fraction:%" Eng4
+   SG_ Eng4OilTemp m3 : 63|8@0+ (1,-50) [-50|205] "temperature:C" Eng4
+   SG_ Eng4OilPress m3 : 55|8@0+ (4,0) [0|1020] "pressure_gauge:kPa(g)" Eng4
+   SG_ Eng4OilPressLowState m3 : 4|1@0+ (1,0) [0|0] "unitless:" Eng4
+   SG_ Eng4ECUBatteryVoltsLowState m3 : 7|1@0+ (1,0) [0|0] "unitless:" Eng4
+   SG_ Eng4IntakeManifoldPress m3 : 31|16@0+ (0.1,0) [0|6553.5] "pressure:kPa" Eng4
+   SG_ Eng4MILState m3 : 2|1@0+ (1,0) [0|0] "unitless:" Eng4
+   SG_ Eng3CoolantTempHighState m2 : 3|1@0+ (1,0) [0|0] "unitless:" Eng3
+   SG_ Eng3TiltTrimPercent m2 : 47|8@0+ (0.5,0) [0|127.5] "fraction:%" Eng3
+   SG_ Eng3EngineSpeed m2 : 15|16@0+ (0.25,0) [0|0] "angular_speed:rpm" Eng3
+   SG_ Eng4EngineSpeed m3 : 15|16@0+ (0.25,0) [0|0] "angular_speed:rpm" Eng4
+   SG_ Eng3OilTemp m2 : 63|8@0+ (1,-50) [-50|205] "temperature:C" Eng3
+   SG_ Eng3OilPress m2 : 55|8@0+ (4,0) [0|1020] "pressure_gauge:kPa(g)" Eng3
+   SG_ Eng3OilPressLowState m2 : 4|1@0+ (1,0) [0|0] "unitless:" Eng3
+   SG_ Eng3OilLevelLowState m2 : 5|1@0+ (1,0) [0|0] "unitless:" Eng3
+   SG_ Eng4OilLevelLowState m3 : 5|1@0+ (1,0) [0|0] "unitless:" Eng4
+   SG_ Eng3ECUBatteryVoltsLowState m2 : 7|1@0+ (1,0) [0|0] "unitless:" Eng3
+   SG_ Eng3IntakeManifoldPress m2 : 31|16@0+ (0.1,0) [0|6553.5] "pressure:kPa" Eng3
+   SG_ Eng3FuelPressLowState m2 : 6|1@0+ (1,0) [0|0] "unitless:" Eng3
+   SG_ Eng4FuelPressLowState m3 : 6|1@0+ (1,0) [0|0] "unitless:" Eng4
+   SG_ Eng3MILState m2 : 2|1@0+ (1,0) [0|0] "unitless:" Eng3
+   SG_ Eng2CoolantTempHighState m1 : 3|1@0+ (1,0) [0|0] "unitless:" Eng2
+   SG_ Eng2TiltTrimPercent m1 : 47|8@0+ (0.5,0) [0|127.5] "fraction:%" Eng2
+   SG_ Eng2EngineSpeed m1 : 15|16@0+ (0.25,0) [0|0] "angular_speed:rpm" Eng2
+   SG_ Eng2OilTemp m1 : 63|8@0+ (1,-50) [-50|205] "temperature:C" Eng2
+   SG_ Eng2OilPress m1 : 55|8@0+ (4,0) [0|1020] "pressure_gauge:kPa(g)" Eng2
+   SG_ Eng2OilPressLowState m1 : 4|1@0+ (1,0) [0|0] "unitless:" Eng2
+   SG_ Eng2OilLevelLowState m1 : 5|1@0+ (1,0) [0|0] "unitless:" Eng2
+   SG_ Eng2ECUBatteryVoltsLowState m1 : 7|1@0+ (1,0) [0|0] "unitless:" Eng2
+   SG_ Eng2IntakeManifoldPress m1 : 31|16@0+ (0.1,0) [0|6553.5] "pressure:kPa" Eng2
+   SG_ Eng2FuelPressLowState m1 : 6|1@0+ (1,0) [0|0] "unitless:" Eng2
+   SG_ Eng2MILState m1 : 2|1@0+ (1,0) [0|0] "unitless:" Eng2
+   SG_ Eng1TiltTrimPercent m0 : 47|8@0+ (0.5,0) [0|127.5] "fraction:%" Eng1
+   SG_ Eng1EngineSpeed m0 : 15|16@0+ (0.25,0) [0|0] "angular_speed:rpm" Eng1
+   SG_ Eng1OilTemp m0 : 63|8@0+ (1,-50) [-50|205] "temperature:C" Eng1
+   SG_ Eng1OilPress m0 : 55|8@0+ (4,0) [0|1020] "pressure_gauge:kPa(g)" Eng1
+   SG_ Eng1OilLevelLowState m0 : 5|1@0+ (1,0) [0|0] "unitless:" Eng1
+   SG_ Eng1ECUBatteryVoltsLowState m0 : 7|1@0+ (1,0) [0|0] "unitless:" Eng1
+   SG_ Eng1FuelPressErrorState m0 : 6|1@0+ (1,0) [0|0] "unitless:" Eng1
+   SG_ Eng1IntakeManifoldPress m0 : 31|16@0+ (0.1,0) [0|6553.5] "pressure:kPa" Eng1
+   SG_ Eng1CoolantTempHighState m0 : 3|1@0+ (1,0) [0|0] "unitless:" Eng1
+   SG_ Eng1OilPressLowState m0 : 4|1@0+ (1,0) [0|0] "unitless:" Eng1
+   SG_ EngId1U M : 1|2@0+ (1,0) [0|0] "unitless:" Vector__XXX
+   SG_ Eng1MILState m0 : 2|1@0+ (1,0) [0|0] "unitless:" Eng1
+
+BA_DEF_ BO_ "GenMsgCycleTime" INT 1 2000;
+BA_DEF_ BO_ "GenMsgSendType" ENUM "Cyclic";
+BA_DEF_ BO_ "GenMsgILSupport" ENUM "Cyclic","No","Yes";
+BA_DEF_ BU_ "ILUsed" ENUM "Cyclic","No","Yes","No","Yes";
+BA_DEF_ BO_ "DBC_Author_Contact" STRING ;
+BA_DEF_ BO_ "GenMsgBackgroundColor" STRING ;
+BA_DEF_ BO_ "GenMsgForegroundColor" STRING ;
+BA_DEF_ BO_ "isj1939dbc" INT 0 0;
+BA_DEF_DEF_ "GenMsgCycleTime" 10;
+BA_DEF_DEF_ "GenMsgSendType" "Cyclic";
+BA_DEF_DEF_ "GenMsgILSupport" "Yes";
+BA_DEF_DEF_ "ILUsed" "Yes";
+BA_DEF_DEF_ "DBC_Author_Contact" "CANbusInfo";
+BA_DEF_DEF_ "GenMsgBackgroundColor" "#ffffff";
+BA_DEF_DEF_ "GenMsgForegroundColor" "#000000";
+BA_DEF_DEF_ "isj1939dbc" 0;

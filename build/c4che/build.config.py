@@ -1,0 +1,2 @@
+version = 0x2010400
+tools = [{'tool': 'ar', 'tooldir': [], 'funs': None}, {'tool': 'c', 'tooldir': [], 'funs': None}, {'tool': 'clang', 'tooldir': [], 'funs': None}, {'tool': 'compiler_c', 'tooldir': [], 'funs': None}, {'tool': 'ar', 'tooldir': [], 'funs': None}, {'tool': 'cxx', 'tooldir': [], 'funs': None}, {'tool': 'clang++', 'tooldir': [], 'funs': None}, {'tool': 'compiler_cxx', 'tooldir': [], 'funs': None}, {'tool': 'clang_compilation_database', 'tooldir': [], 'funs': None}]

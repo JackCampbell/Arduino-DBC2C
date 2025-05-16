@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<creator>
+  <node class="Design" fit="1" classname="DBCFileDialog" parent-type="wxDialog" name="design" parent-id="0" generate="0" minsize="800,600">
+    <node class="BoxSizer" name="boxsizer_0" layout="1" orientation="8">
+      <node class="Notebook" name="tabs" sizer-flags="wxALL|wxEXPAND" member="1" sizer-proportion="1">
+        <node class="Panel" name="global" page-label="Global">
+          <node class="BoxSizer" name="boxsizer_1" layout="1" orientation="8">
+            <node class="FlexGridSizer" name="flexgridsizer_0" sizer-flags="wxALL|wxEXPAND" flex-cols="1" sizer-proportion="0">
+              <node class="StaticText" name="statictext_0" label="Version"/>
+              <node class="TextCtrl" name="version" sizer-flags="wxALL|wxEXPAND" member="1" sizer-proportion="0"/>
+              <node class="StaticText" name="statictext_1" label="Baudrate"/>
+              <node class="TextCtrl" name="baudrate" sizer-flags="wxALL|wxEXPAND" member="1" sizer-proportion="0"/>
+              <node class="Spacer" name="spacer_0"/>
+              <node class="TextCtrl" name="btr1" sizer-flags="wxALL|wxEXPAND" member="1" sizer-proportion="0"/>
+              <node class="Spacer" name="spacer_1"/>
+              <node class="TextCtrl" name="btr2" sizer-flags="wxALL|wxEXPAND" member="1" sizer-proportion="0"/>
+            </node>
+            <node class="Notebook" name="notebook_0" sizer-flags="wxALL|wxEXPAND" sizer-proportion="1">
+              <node class="TextCtrl" name="comment" page-label="Comment" window-flags="wxTE_MULTILINE|wxBORDER_NONE" member="1"/>
+              <node class="Custom" classname="AttributePanel" name="attrs" include="AttributePanel.h" page-label="Attributes" member="1"/>
+            </node>
+          </node>
+        </node>
+        <node class="Custom" classname="DefinePanel" name="defines" include="DefinePanel.h" page-label="Attr Defines" label="" member="1"/>
+        <node class="Custom" classname="ValTablePanel" name="tables" include="ValTablePanel.h" page-label="Value Tables" member="1"/>
+        <node class="Custom" classname="NodePanel" name="nodes" include="NodePanel.h" page-label="Nodes" member="1"/>
+        <node class="Custom" classname="MessagePanel" name="messages" include="MessagePanel.h" page-label="Messages" member="1"/>
+      </node>
+      <node class="DialogButtonSizer" name="dialogbuttonsizer_0" sizer-flags="wxALL|wxEXPAND" buttons="wxID_OK;wxID_CANCEL" sizer-proportion="0"/>
+    </node>
+  </node>
+</creator>

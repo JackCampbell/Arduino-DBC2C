@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<creator>
+  <node class="Design" classname="ValueListPanel" parent-type="wxPanel" name="design" parent-id="1" generate="0" minsize="300,200">
+    <node class="BoxSizer" name="boxsizer_0" layout="1" orientation="8">
+      <node class="Toolbar" name="toolbar_0" sizer-flags="wxEXPAND" sizer-proportion="0">
+        <node class="ToolbarItem" name="toolbaritem_0" tool-id="wxID_ADD_ITEM" bitmap="add_icon"/>
+        <node class="ToolbarItem" name="toolbaritem_1" tool-id="wxID_REM_ITEM" bitmap="trash_icon"/>
+      </node>
+      <node class="ListCtrl" columns="Value;Desc" name="list" sizer-flags="wxEXPAND" window-flags="wxVSCROLL|wxLC_REPORT|wxBORDER_NONE|wxTAB_TRAVERSAL|wxHSCROLL" member="1" window-id="wxID_ITEM_LIST" sizer-proportion="1"/>
+    </node>
+  </node>
+</creator>

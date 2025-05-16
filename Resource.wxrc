@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources version="5">
+  <node class="Window" name="wxID_DEVELOPER" type="0" value="1"/>
+  <node class="Window" name="wxID_ADD_DBC_FILE" type="0" value="1"/>
+  <node class="Window" name="wxID_NEW_DBC_FILE" type="0" value="1"/>
+  <node class="Window" name="wxID_REMOVE_DBC_FILE" type="0" value="1"/>
+  <node class="Window" name="wxID_DBC_FILES" type="0" value="1"/>
+  <node class="Window" name="wxID_ATTR_LIST" type="0" value="1"/>
+  <node class="Window" name="wxID_REM_ATTR" type="0" value="1"/>
+  <node class="Window" name="wxID_ADD_ATTR" type="0" value="1"/>
+  <node class="Window" name="wxID_ADD_DEFINE" type="0" value="1"/>
+  <node class="Window" name="wxID_REM_DEFINE" type="0" value="1"/>
+  <node class="Window" name="wxID_DEFINE_LIST" type="0" value="1"/>
+  <node class="Window" name="wxID_ADD_ITEM" type="0" value="1"/>
+  <node class="Window" name="wxID_REM_ITEM" type="0" value="1"/>
+  <node class="Window" name="wxID_UP_ITEM" type="0" value="1"/>
+  <node class="Window" name="wxID_DOWN_ITEM" type="0" value="1"/>
+  <node class="Window" name="wxID_ITEM_LIST" type="0" value="1"/>
+  <node class="Window" name="wxID_LOAD_ITEM" type="0" value="1"/>
+  <node class="Window" name="wxID_SAVE_ITEM" type="0" value="1"/>
+  <node class="Window" name="wxID_GEN_ITEM" type="0" value="1"/>
+  <node class="Window" name="wxID_FILE_LIST" type="0" value="1"/>
+  <node class="Window" name="wxID_MSG_LIST" type="0" value="1"/>
+  <node class="Window" name="wxID_SIG_LIST" type="0" value="1"/>
+  <node class="Window" name="wxID_GEN_EDIT" type="0" value="1"/>
+  <node class="Window" name="wxID_MOVE_UP" type="0" value="1"/>
+  <node class="Window" name="wxID_MOVE_DOWN" type="0" value="1"/>
+  <node class="Bitmap" name="file_icon" path="assets/file_icon.png" theme="0"/>
+  <node class="Bitmap" name="folder_icon" path="assets/folder_icon.png" theme="0"/>
+  <node class="Bitmap" name="edit_icon" path="assets/edit_icon.png" theme="0"/>
+  <node class="Bitmap" name="trash_icon" path="assets/remove_icon.png" theme="0"/>
+  <node class="Bitmap" name="add_icon" path="assets/add_icon.png" theme="0"/>
+  <node class="Bitmap" name="move_up_icon" path="assets/up_icon.png" theme="0"/>
+  <node class="Bitmap" name="move_down_icon" path="assets/down_icon.png" theme="0"/>
+  <node class="Bitmap" name="save_icon" path="assets/save_icon.png" theme="0"/>
+  <node class="Bitmap" name="setting_icon" path="assets/setting_icon.png" theme="0"/>
+  <node class="Bitmap" name="books_icon" path="assets/books_icon.png" theme="0"/>
+  <node class="Bitmap" name="swap_icon" path="assets/swap_icon.png" theme="0"/>
+  <node class="Window" name="wxID_CHANNEL_BTN" type="0" value="1"/>
+</resources>

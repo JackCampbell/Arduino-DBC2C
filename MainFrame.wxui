@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<creator>
+  <node class="Design" classname="MainFrame" parent-type="wxPanel" name="design" parent-id="1" generate="0" minsize="800,600">
+    <node class="BoxSizer" name="boxsizer_0" sizer-flags="0" layout="1" orientation="8" sizer-proportion="0">
+      <node class="Toolbar" name="maintool" sizer-flags="wxEXPAND" member="1" sizer-proportion="0">
+        <node class="ToolbarItem" name="toolbaritem_2" tool-id="wxID_ADD_ITEM" bitmap="add_icon"/>
+        <node class="ToolbarItem" name="toolbaritem_4" tool-id="wxID_REM_ITEM" bitmap="trash_icon"/>
+        <node class="ToolbarItem" name="toolbaritem_5" kind="-1"/>
+        <node class="ToolbarItem" name="toolbaritem_6" tool-id="wxID_LOAD_ITEM" bitmap="folder_icon"/>
+        <node class="ToolbarItem" name="toolbaritem_7" tool-id="wxID_SAVE_ITEM" bitmap="save_icon"/>
+        <node class="ToolbarItem" name="toolbaritem_8" kind="-1"/>
+        <node class="ToolbarItem" name="toolbaritem_9" tool-id="wxID_GEN_ITEM" bitmap="setting_icon"/>
+        <node class="ToolbarItem" name="toolbaritem_0" kind="-1"/>
+        <node class="ToolbarItem" name="toolbaritem_1" tool-id="wxID_DBC_FILES" bitmap="books_icon"/>
+      </node>
+      <node class="BoxSizer" name="boxsizer_3" sizer-flags="wxALL|wxEXPAND" orientation="4" sizer-proportion="0">
+        <node class="StaticText" name="channel_info" sizer-flags="wxALL" window-flags="wxALIGN_CENTER_HORIZONTAL|wxBORDER_NONE" label="Channel" member="1" sizer-proportion="1"/>
+        <node class="Button" direction="128" name="channel_setting" sizer-flags="wxALL" window-flags="wxBORDER_NONE|wxBU_NOTEXT" label="Setting" minsize="-1,-1" bitmap="setting_icon" member="1" window-id="wxID_CHANNEL_BTN" sizer-proportion="0"/>
+      </node>
+      <node class="ListCtrl" columns="Type;Desc;Signals" name="gens" sizer-flags="wxEXPAND" window-flags="wxVSCROLL|wxLC_REPORT|wxBORDER_NONE|wxTAB_TRAVERSAL|wxHSCROLL" member="1" window-id="wxID_ITEM_LIST" sizer-proportion="1"/>
+      <node class="StaticText" name="genfile" sizer-flags="wxALL|wxEXPAND" label="---" member="1" sizer-proportion="0"/>
+    </node>
+  </node>
+</creator>
