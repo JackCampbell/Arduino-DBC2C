@@ -24,9 +24,9 @@
       "-D__WXOSX_COCOA__",
       "../AttributePanel.cpp",
       "-c",
-      "-o/Users/jack/Desktop/MarineFeaterTools/build/AttributePanel.cpp.1.o"
+      "-o/Users/jack/Desktop/MarineFeather/build/AttributePanel.cpp.1.o"
     ],
-    "directory": "/Users/jack/Desktop/MarineFeaterTools/build",
+    "directory": "/Users/jack/Desktop/MarineFeather/build",
     "file": "../AttributePanel.cpp"
   },
   {
@@ -54,9 +54,9 @@
       "-D__WXOSX_COCOA__",
       "../DBCBitMap.cpp",
       "-c",
-      "-o/Users/jack/Desktop/MarineFeaterTools/build/DBCBitMap.cpp.1.o"
+      "-o/Users/jack/Desktop/MarineFeather/build/DBCBitMap.cpp.1.o"
     ],
-    "directory": "/Users/jack/Desktop/MarineFeaterTools/build",
+    "directory": "/Users/jack/Desktop/MarineFeather/build",
     "file": "../DBCBitMap.cpp"
   },
   {
@@ -84,9 +84,9 @@
       "-D__WXOSX_COCOA__",
       "../DBCFile.cpp",
       "-c",
-      "-o/Users/jack/Desktop/MarineFeaterTools/build/DBCFile.cpp.1.o"
+      "-o/Users/jack/Desktop/MarineFeather/build/DBCFile.cpp.1.o"
     ],
-    "directory": "/Users/jack/Desktop/MarineFeaterTools/build",
+    "directory": "/Users/jack/Desktop/MarineFeather/build",
     "file": "../DBCFile.cpp"
   },
   {
@@ -114,9 +114,9 @@
       "-D__WXOSX_COCOA__",
       "../DBCFileDialog.cpp",
       "-c",
-      "-o/Users/jack/Desktop/MarineFeaterTools/build/DBCFileDialog.cpp.1.o"
+      "-o/Users/jack/Desktop/MarineFeather/build/DBCFileDialog.cpp.1.o"
     ],
-    "directory": "/Users/jack/Desktop/MarineFeaterTools/build",
+    "directory": "/Users/jack/Desktop/MarineFeather/build",
     "file": "../DBCFileDialog.cpp"
   },
   {
@@ -144,9 +144,9 @@
       "-D__WXOSX_COCOA__",
       "../DBCObject.cpp",
       "-c",
-      "-o/Users/jack/Desktop/MarineFeaterTools/build/DBCObject.cpp.1.o"
+      "-o/Users/jack/Desktop/MarineFeather/build/DBCObject.cpp.1.o"
     ],
-    "directory": "/Users/jack/Desktop/MarineFeaterTools/build",
+    "directory": "/Users/jack/Desktop/MarineFeather/build",
     "file": "../DBCObject.cpp"
   },
   {
@@ -174,9 +174,9 @@
       "-D__WXOSX_COCOA__",
       "../DefinePanel.cpp",
       "-c",
-      "-o/Users/jack/Desktop/MarineFeaterTools/build/DefinePanel.cpp.1.o"
+      "-o/Users/jack/Desktop/MarineFeather/build/DefinePanel.cpp.1.o"
     ],
-    "directory": "/Users/jack/Desktop/MarineFeaterTools/build",
+    "directory": "/Users/jack/Desktop/MarineFeather/build",
     "file": "../DefinePanel.cpp"
   },
   {
@@ -204,9 +204,9 @@
       "-D__WXOSX_COCOA__",
       "../FileSelectDialog.cpp",
       "-c",
-      "-o/Users/jack/Desktop/MarineFeaterTools/build/FileSelectDialog.cpp.1.o"
+      "-o/Users/jack/Desktop/MarineFeather/build/FileSelectDialog.cpp.1.o"
     ],
-    "directory": "/Users/jack/Desktop/MarineFeaterTools/build",
+    "directory": "/Users/jack/Desktop/MarineFeather/build",
     "file": "../FileSelectDialog.cpp"
   },
   {
@@ -234,9 +234,9 @@
       "-D__WXOSX_COCOA__",
       "../GenSignal.cpp",
       "-c",
-      "-o/Users/jack/Desktop/MarineFeaterTools/build/GenSignal.cpp.1.o"
+      "-o/Users/jack/Desktop/MarineFeather/build/GenSignal.cpp.1.o"
     ],
-    "directory": "/Users/jack/Desktop/MarineFeaterTools/build",
+    "directory": "/Users/jack/Desktop/MarineFeather/build",
     "file": "../GenSignal.cpp"
   },
   {
@@ -264,9 +264,9 @@
       "-D__WXOSX_COCOA__",
       "../Lexer.cpp",
       "-c",
-      "-o/Users/jack/Desktop/MarineFeaterTools/build/Lexer.cpp.1.o"
+      "-o/Users/jack/Desktop/MarineFeather/build/Lexer.cpp.1.o"
     ],
-    "directory": "/Users/jack/Desktop/MarineFeaterTools/build",
+    "directory": "/Users/jack/Desktop/MarineFeather/build",
     "file": "../Lexer.cpp"
   },
   {
@@ -294,9 +294,9 @@
       "-D__WXOSX_COCOA__",
       "../MarineApp.cpp",
       "-c",
-      "-o/Users/jack/Desktop/MarineFeaterTools/build/MarineApp.cpp.1.o"
+      "-o/Users/jack/Desktop/MarineFeather/build/MarineApp.cpp.1.o"
     ],
-    "directory": "/Users/jack/Desktop/MarineFeaterTools/build",
+    "directory": "/Users/jack/Desktop/MarineFeather/build",
     "file": "../MarineApp.cpp"
   },
   {
@@ -324,9 +324,9 @@
       "-D__WXOSX_COCOA__",
       "../MarineAppDev.cpp",
       "-c",
-      "-o/Users/jack/Desktop/MarineFeaterTools/build/MarineAppDev.cpp.1.o"
+      "-o/Users/jack/Desktop/MarineFeather/build/MarineAppDev.cpp.1.o"
     ],
-    "directory": "/Users/jack/Desktop/MarineFeaterTools/build",
+    "directory": "/Users/jack/Desktop/MarineFeather/build",
     "file": "../MarineAppDev.cpp"
   },
   {
@@ -354,9 +354,9 @@
       "-D__WXOSX_COCOA__",
       "../MessagePanel.cpp",
       "-c",
-      "-o/Users/jack/Desktop/MarineFeaterTools/build/MessagePanel.cpp.1.o"
+      "-o/Users/jack/Desktop/MarineFeather/build/MessagePanel.cpp.1.o"
     ],
-    "directory": "/Users/jack/Desktop/MarineFeaterTools/build",
+    "directory": "/Users/jack/Desktop/MarineFeather/build",
     "file": "../MessagePanel.cpp"
   },
   {
@@ -384,9 +384,9 @@
       "-D__WXOSX_COCOA__",
       "../NodePanel.cpp",
       "-c",
-      "-o/Users/jack/Desktop/MarineFeaterTools/build/NodePanel.cpp.1.o"
+      "-o/Users/jack/Desktop/MarineFeather/build/NodePanel.cpp.1.o"
     ],
-    "directory": "/Users/jack/Desktop/MarineFeaterTools/build",
+    "directory": "/Users/jack/Desktop/MarineFeather/build",
     "file": "../NodePanel.cpp"
   },
   {
@@ -414,9 +414,9 @@
       "-D__WXOSX_COCOA__",
       "../SignalSelector.cpp",
       "-c",
-      "-o/Users/jack/Desktop/MarineFeaterTools/build/SignalSelector.cpp.1.o"
+      "-o/Users/jack/Desktop/MarineFeather/build/SignalSelector.cpp.1.o"
     ],
-    "directory": "/Users/jack/Desktop/MarineFeaterTools/build",
+    "directory": "/Users/jack/Desktop/MarineFeather/build",
     "file": "../SignalSelector.cpp"
   },
   {
@@ -444,9 +444,9 @@
       "-D__WXOSX_COCOA__",
       "../Utils.cpp",
       "-c",
-      "-o/Users/jack/Desktop/MarineFeaterTools/build/Utils.cpp.1.o"
+      "-o/Users/jack/Desktop/MarineFeather/build/Utils.cpp.1.o"
     ],
-    "directory": "/Users/jack/Desktop/MarineFeaterTools/build",
+    "directory": "/Users/jack/Desktop/MarineFeather/build",
     "file": "../Utils.cpp"
   },
   {
@@ -474,9 +474,9 @@
       "-D__WXOSX_COCOA__",
       "../ValTablePanel.cpp",
       "-c",
-      "-o/Users/jack/Desktop/MarineFeaterTools/build/ValTablePanel.cpp.1.o"
+      "-o/Users/jack/Desktop/MarineFeather/build/ValTablePanel.cpp.1.o"
     ],
-    "directory": "/Users/jack/Desktop/MarineFeaterTools/build",
+    "directory": "/Users/jack/Desktop/MarineFeather/build",
     "file": "../ValTablePanel.cpp"
   },
   {
@@ -504,9 +504,9 @@
       "-D__WXOSX_COCOA__",
       "../stubs/Resource.cpp",
       "-c",
-      "-o/Users/jack/Desktop/MarineFeaterTools/build/stubs/Resource.cpp.1.o"
+      "-o/Users/jack/Desktop/MarineFeather/build/stubs/Resource.cpp.1.o"
     ],
-    "directory": "/Users/jack/Desktop/MarineFeaterTools/build",
+    "directory": "/Users/jack/Desktop/MarineFeather/build",
     "file": "../stubs/Resource.cpp"
   }
 ]

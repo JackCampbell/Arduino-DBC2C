@@ -876,7 +876,7 @@ void GenPreviewDialog::CodeGenerate() {
 		builder += "    CAN_message_t msg;\n";
 		builder += wxString::Format( "    msg.id = 0x%03x;\n", message->ID );
 		builder += wxString::Format( "    msg.len = %d;\n", message->size );
-		for( int j = 0; j < 8; j++ ) {
+		for( int j = 0; j < message->size; j++ ) {
 			wxString raw = "0x0";
 			if( !output[j].empty() ) {
 				raw = output[j];
