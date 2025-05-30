@@ -41,12 +41,15 @@ private:
 	void OnRemoveGenerate( wxCommandEvent &event );
 	void OnLoadGenerator( wxCommandEvent &event );
 	void OnSaveGenerator( wxCommandEvent &event );
+	void OnSaveAsGenerator( wxCommandEvent &event );
 	void OnFileGenerator( wxCommandEvent &event );
 	void OnSettingChannel( wxCommandEvent &event );
 	void OnDBCFiles( wxCommandEvent &event );
+	void OnSortList( wxListEvent &event );
 	wxArrayString GetCodeGenVariables();
-	
+
 	void UpdateConnectInfo();
+	void UpdateLinkSignals();
 private:
 	wxSharedPtr<Ui::MainFrame> ui;
 	wxVector<wxDBCFile *> files;

@@ -143,7 +143,7 @@ wxString CodeGenLink::GetDescription() const {
 	return "Undefined";
 }
 
-const int CodeGen::CODEGEN_VERSION = 14;
+const int CodeGen::CODEGEN_VERSION = 15;
 CodeGen::CodeGen() {
 	channel.id = 0;
 	channel.baudrate = 500000;
@@ -202,14 +202,6 @@ bool CodeGen::LoadFile( const wxString &filename ) {
 		link->Restore( stream, version );
 		links.push_back( link );
 	}
-	// READ FILE PATH
-	{
-		wxFileName dbcfile = wxFileName( filename ); // copy
-		dbcfile.SetName( channel.name );
-		dbcfile.SetExt( "dbc" );
-		wxString absolute = dbcfile.GetFullPath();
-		AddDBCFile( absolute );
-	}
 
 	this->filename = filename;
 	return true;
@@ -229,19 +221,6 @@ bool CodeGen::SaveFile( const wxString &filename ) {
 		links[i]->Save( stream );
 	}
 	this->filename = filename;
-
-	// ADD File PATHS
-
-	wxDBCFile *dbc = FindDBCFile( channel.name );
-	if( dbc ) {
-		wxString dirname = wxFileName( filename ).GetPath();
-		wxFileName dbcfile = dbc->GetFilename();
-		dbcfile.MakeRelativeTo( dirname );
-
-		wxString relative = dbcfile.GetFullPath();
-		stream.WriteString( relative );
-	}
-
 	return true;
 }
 
@@ -675,7 +654,7 @@ void setup() {
 	pinMode( PIN_CAN_BOOSTEN, OUTPUT );
 	digitalWrite( PIN_CAN_BOOSTEN, true ); // turn on booster
 
-	if( !CAN.begin( CANch1_baudrate ) ) {
+	if( !CAN.begin( CAN_baudrate ) ) {
 		Serial.println( "Starting CAN failed!" );
 		while( 1 ) {
 			delay( 10 );
@@ -801,18 +780,27 @@ int GroupMessageList( const CodeGen *codes, wxVector<GroupItem> &send_groups, wx
 void GenPreviewDialog::CodeGenerate() {
 	wxString builder;
 
+	wxArrayString defines;
 	builder += "// Code Generator\n\n";
 	builder += preDefineCode;
-	builder += wxString::Format( "#define CANch1_baudrate %ld\n", codes->channel.baudrate );
+	builder += wxString::Format( "#define CAN_baudrate %ld\n", codes->channel.baudrate );
+
+	defines.clear();
 	for( int i = 0; i < codes->links.size(); i++ ) {
 		CodeGenLink *link = codes->links.at( i );
+		if( defines.Index( link->name, false ) != wxNOT_FOUND ) {
+			continue;
+		}
 		if( link->type == CGT_RECEIVE ) {
 			builder += wxString::Format( "volatile int32_t %s = 0; // %s\n", link->name, link->GetDescription() );
+			defines.Add( link->name );
 		}
 		if( link->type == CGT_COUNT ) {
 			builder += wxString::Format( "volatile int32_t %s = 0; // %s\n", link->name, link->GetDescription() );
+			defines.Add( link->name );
 		}
 	}
+	fflush( stdout );
 
 	builder += "\n\n";
 
@@ -855,21 +843,20 @@ void GenPreviewDialog::CodeGenerate() {
 		for( int j = 0; j < group.names.size(); j++ ) {
 			const wxDBCSignal *signal = group.signals[j];
 			const wxString name = group.names[j];
-			if( defined.Index( name ) != -1 ) {
-				continue;
-			}
-			int type = group.types[j];
-			if( type == CGT_STATIC ) {
-				builder += wxString::Format( "    uint32_t %s_raw = %d;\n", name, group.values[j] );
-			} else if( type == CGT_COUNT ) {
-				builder += wxString::Format( "    uint32_t %s_raw = %s;\n", name, MakeWriteLinearAndClamp( signal, name ) );
-				//
-				suffix_code.push_back( wxString::Format( "    %s = (%s + 1) & 0x%02x;\n", name, name, ( 1 << signal->bit_len ) - 1 ) );
-			} else {
-				builder += wxString::Format( "    uint32_t %s_raw = %s;\n", name, MakeWriteLinearAndClamp( signal, name ) );
+			if( defined.Index( name ) == wxNOT_FOUND ) {
+				int type = group.types[j];
+				if( type == CGT_STATIC ) {
+					builder += wxString::Format( "    uint32_t %s_raw = %d;\n", name, group.values[j] );
+				} else if( type == CGT_COUNT ) {
+					builder += wxString::Format( "    uint32_t %s_raw = %s;\n", name, MakeWriteLinearAndClamp( signal, name ) );
+					//
+					suffix_code.push_back( wxString::Format( "    %s = (%s + 1) & 0x%02x;\n", name, name, ( 1 << signal->bit_len ) - 1 ) );
+				} else {
+					builder += wxString::Format( "    uint32_t %s_raw = %s;\n", name, MakeWriteLinearAndClamp( signal, name ) );
+				}
+				defined.Add( name );
 			}
 			MakeRawWriteCode( signal, message->size, name, output, "raw" );
-			defined.Add( name );
 		}
 
 		builder += "\n";
@@ -1165,3 +1152,32 @@ void GenPreviewDialog::RegisterSendList( int channel, GenRegSend &regs ) const {
 	}
 	regs.channel = channel;
 }
+
+
+
+bool LinkSortName( CodeGenLink *const lhs, CodeGenLink *const rhs ) {
+	return lhs->name.CmpNoCase( rhs->name ) < 0;
+}
+
+
+bool LinkSortNameInvert( CodeGenLink *const lhs, CodeGenLink *const rhs ) {
+	return lhs->name.CmpNoCase( rhs->name ) > 0;
+}
+
+
+bool LinkSortType( CodeGenLink *const lhs, CodeGenLink *const rhs ) {
+	return (lhs->type - rhs->type) < 0;
+}
+
+bool LinkSortTypeInvert( CodeGenLink *const lhs, CodeGenLink *const rhs ) {
+	return (lhs->type - rhs->type) > 0;
+}
+
+bool LinkSortPath( CodeGenLink *const lhs, CodeGenLink *const rhs ) {
+	return lhs->GetSignals().CmpNoCase( rhs->GetSignals() ) < 0;
+}
+
+bool LinkSortPathInvert( CodeGenLink *const lhs, CodeGenLink *const rhs ) {
+	return lhs->GetSignals().CmpNoCase( rhs->GetSignals() ) > 0;
+}
+

@@ -12,10 +12,5 @@
 #endif
 
 void MainFrame::OnDeveloper( wxCommandEvent &event ) {
-	FileSelectDialog dialog( this );
-	dialog.ShowModal();
+	wxLogMessage( "Test Completed\n" );
 }
-
-
-
-

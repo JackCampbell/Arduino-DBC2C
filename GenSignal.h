@@ -163,7 +163,6 @@ struct GenRegSend {
 	wxVector<GenSendSignal> groups;
 };
 
-
 enum {
 	MARGIN_LINE_NUMBERS = wxSTC_STYLE_DEFAULT,
 	MARGIN_FOLD,
@@ -193,4 +192,11 @@ private:
 };
 
 void GetProtocolNames( wxArrayString &protocols );
+bool LinkSortName( CodeGenLink *const lhs, CodeGenLink *const rhs );
+bool LinkSortNameInvert( CodeGenLink *const lhs, CodeGenLink *const rhs );
+bool LinkSortType( CodeGenLink *const lhs, CodeGenLink *const rhs );
+bool LinkSortTypeInvert( CodeGenLink *const lhs, CodeGenLink *const rhs );
+bool LinkSortPath( CodeGenLink *const lhs, CodeGenLink *const rhs );
+bool LinkSortPathInvert( CodeGenLink *const lhs, CodeGenLink *const rhs );
 
+typedef bool ( *LinkSort_f )( CodeGenLink *const lhs, CodeGenLink *const rhs );

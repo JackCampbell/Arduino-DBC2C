@@ -32,6 +32,7 @@ enum {
 	wxID_MOVE_UP,
 	wxID_MOVE_DOWN,
 	wxID_CHANNEL_BTN,
+	wxID_SAVE_AS_ITEM,
 	wxID_MAX_GENERATE
 };
 extern const wxBitmap &file_icon();

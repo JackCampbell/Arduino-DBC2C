@@ -6,6 +6,7 @@
 #endif
 	
 void Theme_CheckDarkImage(wxImage &image) {
+#ifndef _WIN32
 	if(!wxSystemSettings::GetAppearance().IsDark()) {
 		return;
 	}
@@ -17,6 +18,7 @@ void Theme_CheckDarkImage(wxImage &image) {
 			image.SetRGB(x, y, 255 - r, 255 - g, 255 - b);
 		}
 	}
+#endif
 }
 
 // file_icon => assets/file_icon.png
