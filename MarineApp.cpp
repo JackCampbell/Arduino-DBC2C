@@ -67,6 +67,11 @@ void MainFrame::CreateMenuAndStatus() {
 	menuBar->Append( menuHelp, "&Help" );
 	SetMenuBar( menuBar );
 	CreateStatusBar( MAX_INDICATOR );
+#ifdef WIN32
+	wxIcon icon;
+	icon.CopyFromBitmap( icon_app() );
+	SetIcon( icon );
+#endif
 }
 
 bool MarineApp::OnInit() {

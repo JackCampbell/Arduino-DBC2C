@@ -54,7 +54,7 @@ endif()
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE ${APP_ICON} ${APP_INFO} ${APP_RESOURCE})
 
 # Build
-target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE DEBUG ${wxWidgets_DEFINITIONS})
+target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE ${wxWidgets_DEFINITIONS})
 if(UNIX)
 	target_compile_options(${CMAKE_PROJECT_NAME} PRIVATE -Wno-deprecated -Wno-nonportable-include-path -Wno-delete-incomplete)
 elseif(MSVC)
