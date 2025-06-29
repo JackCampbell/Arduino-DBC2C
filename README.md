@@ -52,12 +52,12 @@ cmake --build ./build --config Release
 License
 -------
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/JackCampbell/MarineFeatherTools/blob/master/LICENSE) file for details.
 
 Releases
 --------
 
-Download the latest release from the Releases page.
+Download the latest release from the [Releases](https://github.com/JackCampbell/MarineFeatherTools/releases) page.
 
 Support and Contact
 -------------------

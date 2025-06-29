@@ -1,7 +1,0 @@
-/Users/jack/Desktop/MarineFeather/build/CMakeFiles/MarineFeatherTools.dir
-/Users/jack/Desktop/MarineFeather/build/CMakeFiles/edit_cache.dir
-/Users/jack/Desktop/MarineFeather/build/CMakeFiles/rebuild_cache.dir
-/Users/jack/Desktop/MarineFeather/build/CMakeFiles/list_install_components.dir
-/Users/jack/Desktop/MarineFeather/build/CMakeFiles/install.dir
-/Users/jack/Desktop/MarineFeather/build/CMakeFiles/install/local.dir
-/Users/jack/Desktop/MarineFeather/build/CMakeFiles/install/strip.dir

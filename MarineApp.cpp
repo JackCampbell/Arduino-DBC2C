@@ -139,7 +139,6 @@ void MainFrame::OnSortList( wxListEvent &event ) {
 		return;
 	}
 	LinkSort_f callbacks[] = { LinkSortType, LinkSortTypeInvert, LinkSortName, LinkSortNameInvert, LinkSortPath, LinkSortPathInvert };
-
 	if( sortCallback == callbacks[col * 2] ) {
 		sortCallback = callbacks[col * 2 + 1];
 	} else {
