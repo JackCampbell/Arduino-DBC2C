@@ -1,4 +1,4 @@
-MarineFeatherTools CAN Communication Code Generator
+Arduino-DBC2C CAN Communication Code Generator
 
 This application reads DBC files and generates code for CAN communication on the Arduino Feather M4 board.
 It was developed specifically for [MarineMods](https://marinemods.us).
@@ -30,7 +30,7 @@ Prerequisites
 Supported platforms
 -------------------
 
-MarineFeatherTools is a cross-platform C++ toolkit and officially supports:
+Arduino-DBC2C is a cross-platform C++ toolkit and officially supports:
 
  - Windows
  - Linux
@@ -43,8 +43,8 @@ To build the application, clone the repository and run the following commands in
 > You must compile with MSVC's native command from a Windows-based computer.
 
 ```bash
-git clone https://github.com/JackCampbell/MarineFeatherTools
-cd MarineFeatherTools
+git clone https://github.com/JackCampbell/Arduino-DBC2C
+cd Arduino-DBC2C
 cmake -S . -B ./build -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 cmake --build ./build --config Release
 ```
@@ -52,12 +52,12 @@ cmake --build ./build --config Release
 License
 -------
 
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/JackCampbell/MarineFeatherTools/blob/master/LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/JackCampbell/Arduino-DBC2C/blob/master/LICENSE) file for details.
 
 Releases
 --------
 
-Download the latest release from the [Releases](https://github.com/JackCampbell/MarineFeatherTools/releases) page.
+Download the latest release from the [Releases](https://github.com/JackCampbell/Arduino-DBC2C/releases) page.
 
 Support and Contact
 -------------------
@@ -68,12 +68,12 @@ Useful links
 ------------
 
 * [DBC File Format Documentations](https://nusolar.github.io/training-f23/pdfs/DBC_File_Format_Documentation.pdf)
+* [DBC2C](https://jackcampbell.github.io/dbc.html)
 * [wxWidgets](https://wxwidgets.org)
 * [CodeEd](https://jackcampbell.github.io/codeed)
 
 Developer
 ---------
 
-* [MarineMods](https://marinemods.us)
 * [JackCampbell](https://jackcampbell.github.io)
-
+* [MarineMods](https://marinemods.us)

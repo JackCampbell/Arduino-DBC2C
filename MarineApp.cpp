@@ -36,6 +36,55 @@ BEGIN_EVENT_TABLE(MainFrame, wxFrame)
 END_EVENT_TABLE()
 // clang-format on
 
+bool MarineApp::OnInit() {
+	if( !wxApp::OnInit() ) {
+		return false;
+	}
+	wxConvCurrent = &wxConvUTF8;
+	wxInitAllImageHandlers();
+	MainFrame *frame = new MainFrame( "Arduino-DBC2C", wxPoint( 64, 64 ), wxSize( 1024, 768 ) );
+	frame->CenterOnParent();
+	frame->Show( true );
+	return true;
+}
+
+wxString AppDesc = R"(Arduino-DBC2C CAN Communication Code Generator
+This application reads DBC files and generates code for CAN communication on the Arduino Feather M4 board.
+It was developed specifically for MarineMods)";
+
+void MainFrame::OnAbout( wxCommandEvent &event ) {
+	wxIcon icon;
+	icon.CopyFromBitmap( icon_app() );
+
+	wxAboutDialogInfo dialog;
+	dialog.SetName( "Arduino-DBC2C" );
+	dialog.SetIcon( icon );
+	dialog.SetVersion( "1.0" );
+	dialog.SetCopyright( "Copyright (c) MarineMods Company. All rights reserved." );
+	dialog.SetDescription(AppDesc);
+	dialog.SetWebSite( "https://github.com/JackCampbell/Arduino-DBC2C" );
+	dialog.AddDeveloper( "B.Firat OZDEMIR (jack_campbell_512@hotmail.com)" );
+	dialog.AddDeveloper( "Ken Riggs (info@marinemods.us)" );
+	wxAboutBox( dialog );
+}
+
+int MarineApp::OnExit() {
+	SaveDBCFilenames();
+	return wxApp::OnExit();
+}
+
+MainFrame::MainFrame( const wxString &title, const wxPoint &pos, const wxSize &size ) : wxFrame( NULL, wxID_ANY, title, pos, size ) {
+	CreateMenuAndStatus();
+	ui = new Ui::MainFrame();
+	ui->Setup( this );
+	SetStatusText( wxString::Format( "Welcome to %s!", title ), APP_STATUS );
+	ReadDBCFilenames();
+}
+
+MainFrame::~MainFrame() {
+}
+
+
 void MainFrame::CreateMenuAndStatus() {
 	wxMenu *menuFile = new wxMenu;
 	menuFile->Append( wxID_LOAD_ITEM, "&Load\tCtrl-O" );
@@ -74,55 +123,6 @@ void MainFrame::CreateMenuAndStatus() {
 #endif
 }
 
-bool MarineApp::OnInit() {
-	if( !wxApp::OnInit() ) {
-		return false;
-	}
-	wxConvCurrent = &wxConvUTF8;
-	wxInitAllImageHandlers();
-	MainFrame *frame = new MainFrame( "MarineFeatherTools", wxPoint( 64, 64 ), wxSize( 1024, 768 ) );
-	frame->CenterOnParent();
-	frame->Show( true );
-	return true;
-}
-
-wxString AppDesc = R"(MarineFeatherTools CAN Communication Code Generator
-This application reads DBC files and generates code for CAN communication on the Arduino Feather M4 board.
-It was developed specifically for MarineMods
-
-+1 888-281-2228)";
-
-void MainFrame::OnAbout( wxCommandEvent &event ) {
-	wxIcon icon;
-	icon.CopyFromBitmap( icon_app() );
-
-	wxAboutDialogInfo dialog;
-	dialog.SetName( "MarineFeatherTools" );
-	dialog.SetIcon( icon );
-	dialog.SetVersion( "1.0" );
-	dialog.SetCopyright( "Copyright (c) MarineMods Company. All rights reserved." );
-	dialog.SetDescription(AppDesc);
-	dialog.SetWebSite( "https://marinemods.us" );
-	dialog.AddDeveloper( "B.Firat OZDEMIR (jack_campbell_512@hotmail.com)" );
-	dialog.AddDeveloper( "Ken Riggs (info@marinemods.us)" );
-	wxAboutBox( dialog );
-}
-
-int MarineApp::OnExit() {
-	SaveDBCFilenames();
-	return wxApp::OnExit();
-}
-
-MainFrame::MainFrame( const wxString &title, const wxPoint &pos, const wxSize &size ) : wxFrame( NULL, wxID_ANY, title, pos, size ) {
-	CreateMenuAndStatus();
-	ui = new Ui::MainFrame();
-	ui->Setup( this );
-	SetStatusText( wxString::Format( "Welcome to %s!", title ), APP_STATUS );
-	ReadDBCFilenames();
-}
-
-MainFrame::~MainFrame() {
-}
 
 void MainFrame::SendStatus( const wxString &message ) {
 	if( wxThread::IsMain() ) {
@@ -249,7 +249,7 @@ void MainFrame::OnRemoveGenerate( wxCommandEvent &event ) {
 }
 
 void MainFrame::OnLoadGenerator( wxCommandEvent &event ) {
-	wxFileDialog dialog( this, "Open Gen file", "", "", "Marine Feather Generate Files (*.gen2f)|*.gen2f", wxFD_OPEN | wxFD_FILE_MUST_EXIST );
+	wxFileDialog dialog( this, "Open Gen file", "", "", "DBC2C Generate Files (*.gen2f)|*.gen2f", wxFD_OPEN | wxFD_FILE_MUST_EXIST );
 	if( dialog.ShowModal() == wxID_CANCEL ) {
 		return;
 	}
@@ -273,7 +273,7 @@ void MainFrame::OnSaveGenerator( wxCommandEvent &event ) {
 }
 
 void MainFrame::OnSaveAsGenerator(wxCommandEvent &event) {
-	wxFileDialog dialog( this, "Save Gen file", "", "", "Marine Feather Generate Files (*.gen2f)|*.gen2f", wxFD_SAVE | wxFD_OVERWRITE_PROMPT );
+	wxFileDialog dialog( this, "Save Gen file", "", "", "DBC2C Generate Files (*.gen2f)|*.gen2f", wxFD_SAVE | wxFD_OVERWRITE_PROMPT );
 	if( dialog.ShowModal() == wxID_CANCEL ) {
 		return;
 	}

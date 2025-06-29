@@ -1,7 +1,7 @@
 [Desktop Entry]
-Name=MarineFeatherTools
-Exec=/usr/local/bin/MarineFeatherTools
-Icon=/usr/local/share/MarineFeatherTools/app_icon.svg
+Name=Arduino-DBC2C
+Exec=/usr/local/bin/Arduino-DBC2C
+Icon=/usr/local/share/Arduino-DBC2C/app_icon.svg
 comment=This application reads DBC files and generates code for CAN communication on the Arduino Feather M4 board.
 Type=Application
 Terminal=false

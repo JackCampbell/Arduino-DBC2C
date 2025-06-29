@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.2)
-project(MarineFeatherTools
+project(Arduino-DBC2C
 	VERSION 1.0
 	DESCRIPTION "This application reads DBC files and generates code for CAN communication on the Arduino Feather M4 board.")
 
@@ -36,7 +36,7 @@ if(APPLE)
 	set_source_files_properties(${APP_ICON} PROPERTIES MACOSX_PACKAGE_LOCATION "Resources")
 	set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES
 		MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/dist/MacOSXBundleInfo.plist.in"
-		MACOSX_BUNDLE_GUI_IDENTIFIER "jack.campbell.MarineFeatherTools"
+		MACOSX_BUNDLE_GUI_IDENTIFIER "jack.campbell.Arduino-DBC2C"
 		MACOSX_BUNDLE_BUNDLE_NAME "${PROJECT_NAME}"
 		MACOSX_BUNDLE_DISPLAY_NAME "${PROJECT_NAME}"
 		MACOSX_BUNDLE_INFO_STRING "${PROJECT_NAME} - ${APP_COPYRIGHT}"
@@ -49,7 +49,7 @@ elseif(WIN32)
 	set(APP_RESOURCE "${CMAKE_CURRENT_SOURCE_DIR}/dist/resource.rc")
 elseif(UNIX)
 	set(APP_ICON "${CMAKE_CURRENT_SOURCE_DIR}/assets/app_icon.svg")
-	set(APP_INFO "${CMAKE_CURRENT_SOURCE_DIR}/dist/MarineFeatherTools.desktop")
+	set(APP_INFO "${CMAKE_CURRENT_SOURCE_DIR}/dist/Arduino-DBC2C.desktop")
 endif()
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE ${APP_ICON} ${APP_INFO} ${APP_RESOURCE})
 
@@ -73,6 +73,7 @@ if(APPLE)
 	install(TARGETS ${CMAKE_PROJECT_NAME} DESTINATION "/Applications")
 elseif(UNIX)
 	install(TARGETS ${CMAKE_PROJECT_NAME} DESTINATION "/usr/local/bin")
-	install(FILES ${APP_ICON} DESTINATION "/usr/local/share/MarineFeatherTools")
+	install(FILES ${APP_ICON} DESTINATION "/usr/local/share/Arduino-DBC2C")
 	install(FILES ${APP_INFO} DESTINATION "/usr/share/applications")
 endif()
+
