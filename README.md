@@ -23,8 +23,8 @@ Prerequisites
 
 - CMake (version 3.10 or higher recommended)  
 - A compatible C++ compiler (e.g., GCC, Clang, MSVC)  
-- wxWidgets library installed on your system  
-- Arduino Feather M4 board for deployment
+- wxWidgets 3.2 and above library is installed on your system.
+- Arduino Feather M4 board and Arduino compiler for distribution.
 
 
 Supported platforms
