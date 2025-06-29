@@ -1,4 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<appconfig version="18" hostname="Jack-MacBook-Pro">
-  <run name="MarineApp" execute="{{PROJECT_PATH}}build/MarineFeather" work_dir="{{PROJECT_PATH}}" arguments="" mode="0" flags="47" build_args="" cache_args="" remote_hostname="raspberry.local:1881" remote_platform="remote-linux"/>
+<appconfig version="14" hostname="Jack-MacBook-Pro">
+  <run name="MarineApp" execute="{{PROJECT_PATH}}/build/MarineFeatherTools.app/Contents/MacOS/MarineFeatherTools" work_dir="{{PROJECT_PATH}}" arguments="" mode="0" flags="15" build_args="" cache_args="" remote_hostname="raspberry.local:1881" remote_platform="remote-linux"/>
+  <run name="MarineFeather" execute="{{PROJECT_PATH}}/build/MarineFeather" work_dir="{{PROJECT_PATH}}/build" arguments="" mode="0" flags="15" build_args="" cache_args="" remote_hostname="" remote_platform=""/>
+  <clang-args></clang-args>
+  <clang-format>Language: Cpp
+BasedOnStyle: LLVM
+ColumnLimit: '8192'
+AccessModifierOffset: '-4'
+PointerAlignment: Right
+Standard: Auto
+TabWidth: '4'
+IndentWidth: '4'
+UseTab: ForIndentation
+InsertBraces: 'true'
+EmptyLineBeforeAccessModifier: Never
+IndentCaseLabels: false
+IndentGotoLabels: false
+SpaceAfterTemplateKeyword: false
+SpacesInParentheses: true
+SpaceBeforeParens: Never
+AlignConsecutiveMacros:
+  Enabled: false
+  AcrossEmptyLines: false
+  AcrossComments: false
+AlignConsecutiveDeclarations:
+  Enabled: false
+  AcrossEmptyLines: false
+  AcrossComments: false
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: InlineOnly
+FixNamespaceComments: false
+NamespaceIndentation: All
+</clang-format>
+  <lldb-command># type summary add wxString --summary-string "${var.m_impl}"
+# type summary add wxMemoryBuffer --summary-string "${var.m_bufdata.m_data%s}"
+</lldb-command>
 </appconfig>

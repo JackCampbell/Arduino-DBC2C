@@ -19,20 +19,20 @@
 // clang-format off
 IMPLEMENT_APP(MarineApp);
 BEGIN_EVENT_TABLE(MainFrame, wxFrame)
-	EVT_MENU(wxID_DEVELOPER, 				MainFrame::OnDeveloper)
+	EVT_MENU(wxID_DEVELOPER, 					MainFrame::OnDeveloper)
 	EVT_MENU(wxID_EXIT,						MainFrame::OnExit)
 	EVT_MENU(wxID_ABOUT,						MainFrame::OnAbout)
 	EVT_MENU(wxID_ADD_ITEM,					MainFrame::OnAddGenerate)
 	EVT_MENU(wxID_REM_ITEM,					MainFrame::OnRemoveGenerate)
-	EVT_LIST_ITEM_ACTIVATED(wxID_ITEM_LIST,	MainFrame::OnEditGenerate)
+	EVT_LIST_ITEM_ACTIVATED(wxID_ITEM_LIST,		MainFrame::OnEditGenerate)
 	EVT_MENU(wxID_LOAD_ITEM,					MainFrame::OnLoadGenerator)
 	EVT_MENU(wxID_SAVE_ITEM,					MainFrame::OnSaveGenerator)
 	EVT_MENU(wxID_SAVE_AS_ITEM,				MainFrame::OnSaveAsGenerator)
 	EVT_MENU(wxID_GEN_ITEM,					MainFrame::OnFileGenerator)
 	EVT_MENU(wxID_DBC_FILES,					MainFrame::OnDBCFiles)
 	EVT_BUTTON(wxID_CHANNEL_BTN,				MainFrame::OnSettingChannel)
-	EVT_MENU(wxID_CHANNEL_BTN,				MainFrame::OnSettingChannel)
-	EVT_LIST_COL_CLICK(wxID_ITEM_LIST,		MainFrame::OnSortList)
+	EVT_MENU(wxID_CHANNEL_BTN,					MainFrame::OnSettingChannel)
+	EVT_LIST_COL_CLICK(wxID_ITEM_LIST,			MainFrame::OnSortList)
 END_EVENT_TABLE()
 // clang-format on
 
@@ -51,16 +51,16 @@ void MainFrame::CreateMenuAndStatus() {
 	menuFile->AppendSeparator();
 #endif
 	menuFile->Append( wxID_EXIT );
-	
+
 	wxMenu *menuEdit = new wxMenu;
 	menuEdit->Append( wxID_CHANNEL_BTN, "Edit Channel" );
 	menuEdit->AppendSeparator();
 	menuEdit->Append( wxID_ADD_ITEM, "Add Signal\tCtrl+A" );
 	menuEdit->Append( wxID_REM_ITEM, "Remove Signal\tDelete" );
-	
+
 	wxMenu *menuHelp = new wxMenu;
 	menuHelp->Append( wxID_ABOUT );
-	
+
 	wxMenuBar *menuBar = new wxMenuBar;
 	menuBar->Append( menuFile, "&File" );
 	menuBar->Append( menuEdit, "&Edit" );
@@ -75,24 +75,30 @@ bool MarineApp::OnInit() {
 	}
 	wxConvCurrent = &wxConvUTF8;
 	wxInitAllImageHandlers();
-	MainFrame *frame = new MainFrame( "Marine Feather", wxPoint( 64, 64 ), wxSize( 1024, 768 ) );
+	MainFrame *frame = new MainFrame( "MarineFeatherTools", wxPoint( 64, 64 ), wxSize( 1024, 768 ) );
 	frame->CenterOnParent();
 	frame->Show( true );
 	return true;
 }
 
+wxString AppDesc = R"(MarineFeatherTools CAN Communication Code Generator
+This application reads DBC files and generates code for CAN communication on the Arduino Feather M4 board.
+It was developed specifically for MarineMods
+
++1 888-281-2228)";
+
 void MainFrame::OnAbout( wxCommandEvent &event ) {
+	wxIcon icon;
+	icon.CopyFromBitmap( icon_app() );
+
 	wxAboutDialogInfo dialog;
-	dialog.SetName( "MarineFeather" );
+	dialog.SetName( "MarineFeatherTools" );
+	dialog.SetIcon( icon );
 	dialog.SetVersion( "1.0" );
-	dialog.SetCopyright( "(C) 2023-2025" );
-	dialog.SetDescription( "MarineFeather is wxWidgets-based application!\n\n+1 888-281-2228" );
+	dialog.SetCopyright( "Copyright (c) MarineMods Company. All rights reserved." );
+	dialog.SetDescription(AppDesc);
 	dialog.SetWebSite( "https://marinemods.us" );
-#ifdef JACK_CAMPBELL
-	dialog.AddDeveloper( "Jack Campbell (jack_campbell_512@hotmail.com)" );
-#else
 	dialog.AddDeveloper( "B.Firat OZDEMIR (jack_campbell_512@hotmail.com)" );
-#endif
 	dialog.AddDeveloper( "Ken Riggs (info@marinemods.us)" );
 	wxAboutBox( dialog );
 }

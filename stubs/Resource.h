@@ -46,4 +46,5 @@ extern const wxBitmap &save_icon();
 extern const wxBitmap &setting_icon();
 extern const wxBitmap &books_icon();
 extern const wxBitmap &swap_icon();
+extern const wxBitmap &icon_app();
 

@@ -38,4 +38,5 @@
   <node class="Bitmap" name="swap_icon" path="assets/swap_icon.png" theme="0"/>
   <node class="Window" name="wxID_CHANNEL_BTN" type="0" value="1"/>
   <node class="Window" name="wxID_SAVE_AS_ITEM" type="0" value="1"/>
+  <node class="Bitmap" name="icon_app" path="assets/app_icon.png" theme="1"/>
 </resources>
