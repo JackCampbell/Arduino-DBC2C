@@ -47,7 +47,7 @@ public:
 		dialogbuttonsizer_0->Realize();
 		boxsizer_0->Add(dialogbuttonsizer_0, 0, wxALL|wxEXPAND, 4);
 		parent->SetSizer(boxsizer_0);
-		parent->Fit();
+		parent->Layout();
 	}
 public:
 	wxListCtrl *active;

@@ -5,7 +5,9 @@
 #pragma hdrstop
 #endif
 
-SignalSelectorDialog::SignalSelectorDialog( wxWindow *parent, wxVector<wxDBCFile *> files, wxWindowID id ) : wxDialog( parent, id, "Signal Selector", wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE | wxRESIZE_BORDER ) {
+wxSize signalSelectorFrameSize = wxSize( 700, 448 );
+
+SignalSelectorDialog::SignalSelectorDialog( wxWindow *parent, wxVector<wxDBCFile *> files, wxWindowID id ) : wxDialog( parent, id, "Signal Selector", wxDefaultPosition, signalSelectorFrameSize, wxDEFAULT_DIALOG_STYLE | wxRESIZE_BORDER ) {
 	this->files = files;
 	ui = new Ui::SignalSelectorDialog();
 	ui->Setup( this );
@@ -13,6 +15,7 @@ SignalSelectorDialog::SignalSelectorDialog( wxWindow *parent, wxVector<wxDBCFile
 	ui->passive->Bind( wxEVT_LIST_ITEM_ACTIVATED, &SignalSelectorDialog::OnAddSignal, this );
 	Bind( wxEVT_TOOL, &SignalSelectorDialog::OnRemoveSignal, this, wxID_REMOVE );
 	Bind( wxEVT_TOOL, &SignalSelectorDialog::OnAddSignal, this, wxID_MOVE_UP );
+	Bind( wxEVT_SIZE, &SignalSelectorDialog::OnSize, this );
 	// Bind( wxEVT_SET_FOCUS, &SignalSelectorDialog::OnFocusDialog, this );
 }
 
@@ -23,8 +26,12 @@ void SignalSelectorDialog::OnFocusDialog( wxFocusEvent &event ) {
 void SignalSelectorDialog::InitDialog() {
 	LoadSelectedList();
 	LoadAllList();
-	Maximize( true );
 	wxDialog::InitDialog();
+}
+
+void SignalSelectorDialog::OnSize( wxSizeEvent &event ) {
+	signalSelectorFrameSize = event.GetSize();
+	event.Skip();
 }
 
 bool SignalSelectorDialog::Validate() {

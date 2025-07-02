@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <creator>
-  <node class="Design" fit="1" classname="SignalSelectorDialog" parent-type="wxDialog" name="design" parent-id="0" generate="0" minsize="700,400">
+  <node class="Design" fit="0" classname="SignalSelectorDialog" parent-type="wxDialog" name="design" parent-id="0" generate="0" minsize="700,400" size="-1,-1">
     <node class="BoxSizer" name="boxsizer_0" layout="1" orientation="8">
       <node class="ListCtrl" columns="Channel;File;Message;Signal;sigpath" name="active" sizer-flags="wxALL|wxEXPAND" window-flags="wxVSCROLL|wxLC_REPORT|wxBORDER_NONE|wxTAB_TRAVERSAL|wxHSCROLL" member="1" sizer-proportion="0"/>
       <node class="Toolbar" name="toolbar_0" sizer-flags="wxALL|wxEXPAND" sizer-proportion="0">

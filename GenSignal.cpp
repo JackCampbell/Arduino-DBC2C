@@ -475,11 +475,9 @@ void GenPreviewDialog::OnChangePreview( wxCommandEvent &event ) {
 	CodeGenerate();
 }
 
-const wxString preDefineCode = R"(
-// GMLAN 2025 J.C. - K.R.
+const wxString preDefineCode = R"(// Arduino-DBC2C 2025 J.C. - K.R.
 #include <Arduino.h>
 #include <CANSAME5x.h>
-#include <Adafruit_NeoPixel.h>
 
 // #define CAN_DEBUG
 // #define SERIAL_LOG
@@ -511,12 +509,9 @@ public:
 	unsigned long last;
 };
 
-#define NEOPIXELPIN 8
-Adafruit_NeoPixel onePixel = Adafruit_NeoPixel( 1, NEOPIXELPIN, NEO_GRB + NEO_KHZ800 );
-
 CANSAME5x CAN;
 
-struct CAN_message_t { // sizeof(TX_SIZE_16)
+struct CAN_message_t {
 	uint32_t id;
 	uint8_t len;
 	uint32_t buf[8];
@@ -525,7 +520,6 @@ struct CAN_message_t { // sizeof(TX_SIZE_16)
 int CAN_Read( CAN_message_t &msg );
 void CAN_Print( const char *TAG, CAN_message_t &msg );
 void CAN_Write( CAN_message_t &msg );
-void OnePixel_Loop();
 
 int32_t clamp32(int32_t value, int32_t min, int32_t max) {
 	if(value < min) {
@@ -541,7 +535,6 @@ int32_t clamp32(int32_t value, int32_t min, int32_t max) {
 
 volatile uint32_t timer_counter = 0; // CanTx_Fx_Timer: 2.5ms
 EvTimer canTxTimer;    // 2500 micros => 2.5 millis => 0.0025 sec
-EvTimer neoPixelTimer; // 1 sec
 
 )";
 
@@ -614,32 +607,6 @@ int CAN_Read( CAN_message_t &msg ) {
 	}
 	return 0;
 }
-
-int np = 0;              //  Number of pixel to turn on/off
-int r = 0, g = 0, b = 0; //  Red, green and blue intensity to display
-int color_step = 0;
-void OnePixel_Loop() {
-	onePixel.begin();
-	onePixel.setPixelColor( 0, 0, 0, 0 );
-	onePixel.setBrightness( 20 );
-	onePixel.show();
-
-	r = g = b = 0;
-	if( color_step & ( 1 << 0 ) ) {
-		r = 255;
-	}
-	if( color_step & ( 1 << 1 ) ) {
-		g = 255;
-	}
-	if( color_step & ( 1 << 2 ) ) {
-		b = 255;
-	}
-	color_step++;
-
-	onePixel.setPixelColor( np, r, g, b ); //  Set pixel color
-	onePixel.show();                       //  Update pixel state
-	onePixel.setBrightness( 100 );
-}
 )";
 
 const wxString preSetupFunction = R"(
@@ -665,10 +632,6 @@ void setup() {
 
 const wxString preLoopFunction = R"(
 void loop() {
-	if( neoPixelTimer.IsElapsed( 1000 ) ) { // 1sec
-		OnePixel_Loop();
-	}
-
 	CAN_message_t msg;
 	while( CAN_Read( msg ) ) {
 		CAN_receive_processing( &msg );
@@ -781,7 +744,6 @@ void GenPreviewDialog::CodeGenerate() {
 	wxString builder;
 
 	wxArrayString defines;
-	builder += "// Code Generator\n\n";
 	builder += preDefineCode;
 	builder += wxString::Format( "#define CAN_baudrate %ld\n", codes->channel.baudrate );
 

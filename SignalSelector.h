@@ -19,7 +19,8 @@ protected:
 	void OnSearchData( wxCommandEvent &event );
 	void OnAddSignal( wxCommandEvent &event );
 	void OnRemoveSignal( wxCommandEvent &event );
-	void OnFocusDialog(wxFocusEvent &event);
+	void OnFocusDialog( wxFocusEvent &event );
+	void OnSize( wxSizeEvent &event );
 private:
 	void UpdateSelectedList();
 

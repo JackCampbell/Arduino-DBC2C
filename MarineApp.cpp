@@ -63,8 +63,8 @@ void MainFrame::OnAbout( wxCommandEvent &event ) {
 	dialog.SetCopyright( "Copyright (c) MarineMods Company. All rights reserved." );
 	dialog.SetDescription(AppDesc);
 	dialog.SetWebSite( "https://github.com/JackCampbell/Arduino-DBC2C" );
-	dialog.AddDeveloper( "B.Firat OZDEMIR (jack_campbell_512@hotmail.com)" );
-	dialog.AddDeveloper( "Ken Riggs (info@marinemods.us)" );
+	dialog.AddDeveloper( "B.Firat OZDEMIR" );
+	dialog.AddDeveloper( "Ken Riggs" );
 	wxAboutBox( dialog );
 }
 
